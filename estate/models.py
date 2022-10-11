@@ -22,7 +22,7 @@ class estate_property(models.Model):
         string='Orientation',
         selection=[('north','North'),('south','South'),('east','East'),('west','West')],)
     active = fields.Boolean('Active', toggle_active=False),
-    state = fields.selection(
+    state = fields.Selection(
         string='State',
         selection=[('new','New'),('sold','Sold'),('canceled','Canceled')],
     )
